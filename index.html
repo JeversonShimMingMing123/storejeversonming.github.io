@@ -4,90 +4,107 @@
     <title>Jeverson Shim Ming Ming Store!</title>
   </head>
   <body>
-<html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <title>Jeverson Shim Ming Ming</title>
-  </head>
-  <style>
-      .button {
-      background-color: #f4511e;
-      border: black;
-      color: white;
-      padding: 16px 32px;
-      text-align: center;
-      font-size: 16px;
-      margin: 4px 2px;
-      opacity: 10;
-      transition: 0.3s;
-      display: inline-block;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 9999999999999999999999999999px;
-    }
+    <html>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <title>Jeverson Shim Ming Ming</title>
+      </head>
+      <style>
+        .button {
+          background-color: #f4511e;
+          border: black;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          font-size: 16px;
+          margin: 4px 2px;
+          opacity: 10;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 9999999999999999999999999999px;
+        }
 
-    .button:hover {
-      opacity: 0.6;
-    }
-    
-    .scroll-left {
- height: 50px;	
- overflow: hidden;
- position: relative;
- background: black;
- color: white;
- border: 1px solid orange;
-}
-.scroll-left p {
- position: absolute;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 50px;
- text-align: center;
- /* Starting position */
- transform:translateX(100%);
- /* Apply animation to this element */
- animation: scroll-left 15s linear infinite;
-}
-/* Move it (define the animation) */
-@keyframes scroll-left {
- 0%   {
- transform: translateX(100%); 		
- }
- 100% {
- transform: translateX(-100%); 
- }
-}
-  </style>
-  <body>
-    <div id="navbar">
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About me</a>
-      <a href="contact.html">Contact</a>
-      <a href="portfolio.html">Portfolio</a>
-    </div>
-    <header>
-      <h1 class="animate__animated animate__fadeInDown">
-        Jeverson Shim Ming Ming Store <br />
-        <e style="font-size: 20px;">I sell my second hand stuff at my home</e>
-        <br />
-        <a href="#catalog"><button class="button">Catalog</button></a>
-      </h1>
-      
-    </header>
-    <h1 id="catalog" style="text-align: center;">
-      Catalog:
-    </h2>
+        .button:hover {
+          opacity: 0.6;
+        }
+
+        .scroll-left {
+          height: 50px;
+          overflow: hidden;
+          position: relative;
+          background: black;
+          color: white;
+          border: 1px solid orange;
+        }
+        .scroll-left p {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          line-height: 50px;
+          text-align: center;
+          /* Starting position */
+          transform: translateX(100%);
+          /* Apply animation to this element */
+          animation: scroll-left 15s linear infinite;
+        }
+        /* Move it (define the animation) */
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      </style>
+      <body>
+        <div id="navbar">
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">Featured</a>
+          <a href="contact.html">Catalog</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+        <header>
+          <h1 class="animate__animated animate__fadeInDown">
+            Jeverson Shim Ming Ming Store <br />
+            <e style="font-size: 20px;"
+              >I sell my second hand stuff at my home</e
+            >
+            <br />
+            <a href="#catalog"><button class="button">Catalog</button></a>
+          </h1>
+        </header>
+        <h1 id="catalog" style="text-align: center;">
+          Catalog:
+        </h1>
+        <div class="card">
+          <img
+            src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720"
+            alt="BigBookofFun"
+            style="width:100%"
+          />
+          <h1>Big Book of Fun with All my Friends</h1>
+          <p class="price">RM 9.99</p>
+          <p>By Disney Junior</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+      </body>
+    </html>
   </body>
 </html>
