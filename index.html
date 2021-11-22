@@ -19,6 +19,57 @@
     </script>
     <title>Jeverson Shim Ming Ming</title>
   </head>
+  <style>
+      .button {
+      background-color: #f4511e;
+      border: black;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 10;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 9999999999999999999999999999px;
+    }
+
+    .button:hover {
+      opacity: 0.6;
+    }
+    
+    .scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: black;
+ color: white;
+ border: 1px solid orange;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+  </style>
   <body>
     <div id="navbar">
       <a href="index.html">Home</a>
@@ -28,14 +79,15 @@
     </div>
     <header>
       <h1 class="animate__animated animate__fadeInDown">
-        Hello! I'm Jeverson Shim Ming Ming <br />
-        <e style="font-size: 20px;">I'm a website developer and a designer</e>
+        Jeverson Shim Ming Ming Store <br />
+        <e style="font-size: 20px;">I sell my second hand stuff at my home</e>
         <br />
-        <a href="aboutme.html"><button class="button">More about me</button></a>
-        <a href="portfolio.html"><button class="button">
-          Portfolio
-          </button></a>
+        <a href="#catalog"><button class="button">Catalog</button></a>
       </h1>
+      
     </header>
+    <h1 id="catalog" style="text-align: center;">
+      Catalog:
+    </h2>
   </body>
 </html>
