@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap");
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-  font-family: Montserrat;
-  scroll-behavior: smooth;
-}
 
 /* Style the navbar */
 #navbar {
