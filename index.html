@@ -16,10 +16,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/a75c97315f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <style>
     body {
       font-family: Montserrat;
+      scroll-behaviour: smooth;
     }
 
     /* Style the navigation bar */
@@ -67,16 +72,25 @@
       text-align: center;
     }
     header {
+      background-color: #3cff00;
+      padding: 80px;
     }
   </style>
   <body>
     <div class="navbar">
-      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a class="active" href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-address-card"></i> About this Store</a>
+      <a href="#catalog"><i class="fas fa-book"></i> Catalog</a>
+      <a href="#"><i class="fas fa-comment-alt"></i> Feedback</a>
     </div>
-    <header></header>
+    <header id="home">
+      <h1 style="text-align: center">
+        Jeverson Shim Ming Ming Store
+      </h1>
+    </header>
+    <catalog id="about">
+      <h1>eeeeee</h1>
+    </catalog>
     <div class="footer">
       <img
         src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2FJeverson%20Shim%20Ming%20Ming%20Store.png?v=1637839694675"
@@ -84,7 +98,6 @@
         style="float:left"
       />
       <p>Another project by Jeverson Shim Ming Ming</p>
-      
     </div>
   </body>
 </html>
