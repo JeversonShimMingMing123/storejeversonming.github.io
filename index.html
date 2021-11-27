@@ -28,12 +28,9 @@
     }
 
     .header {
-      background-g?v=1637839694675);
+      background-color: #4800ff;
       padding: 80px;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
-      font-size: x-large;
-      text-shadow: 2px 2px #000000;
     }
     /* Style the navbar */
     #navbar {
@@ -77,13 +74,22 @@
       <a href="https://www.jeversonming.tk">Personal website</a>
     </div>
     <div class="header">
-      <h1>
+      <h1 style="text-align: center;">
         <img
           src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2FJeverson%20Shim%20Ming%20Ming%20Store.png?v=1637839694675"
           width="100px"
+          class="center"
         />
+        <br />
+        Jeverson Shim Ming Ming Store
       </h1>
     </div>
+    <h2 style="text-align: center">
+      About This Store
+    </h2>
+    <h3>
+      <label id="lblGreetings"></label>
+    </h3>
   </body>
   <script>
     $(document).ready(function() {
@@ -132,5 +138,20 @@
         navbar.classList.remove("sticky");
       }
     }
+    
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+​
+    var greet;
+​
+    if (hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+​
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + '</b> and welcome to Encodedna.com!';
   </script>
 </html>
