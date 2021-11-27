@@ -19,16 +19,17 @@
       src="https://kit.fontawesome.com/a75c97315f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <style>
     body {
       font-family: Montserrat;
-      scroll-behaviour: smooth;
       margin: 0;
       padding: 0;
       height: 100vh;
       width: 100%;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -38,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #eee;
+      background-color: #00ffcc;
     }
 
     h1 {
@@ -47,7 +48,6 @@
       width: 100%;
     }
 
-    /* Style the navigation bar */
     .navbar {
       width: 100%;
       background-color: #555;
@@ -82,17 +82,20 @@
       }
     }
 
-    .footer {
-      left: 0;
-      bottom: ;
-      width: 100%;
-      background-color: red;
+    .btn {
+      background-color: #f4511e;
+      border: none;
       color: white;
+      padding: 16px 32px;
       text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 1;
+      transition: 0.3s;
     }
-    header {
-      background-color: #3cff00;
-      padding: 80px;
+
+    .btn:hover {
+      opacity: 0.6;
     }
   </style>
   <body>
@@ -118,11 +121,41 @@
       <h1 style="text-align: center">
         About This Store
       </h1>
-      <h2 style="text-align: justify">
-        Hello! You must be curious what is this store. Am I right? Even though
-        you are not let me explain you are not
-      </h2>
+      <h3 style="text-align: justify">
+        This store is another project by Jeverson Shim Ming Ming. We sell a lot
+        of things such as second hand books and toys, bread/buns and so on,
+        Click on the button below to go to the catalog section.
+      </h3>
+      <button class="btn">Hover Over Me</button>
       <hr />
     </catalog>
   </body>
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on("click", function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            800,
+            function() {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
 </html>
