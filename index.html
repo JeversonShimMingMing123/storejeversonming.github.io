@@ -64,14 +64,41 @@
     .sticky + .content {
       padding-top: 60px;
     }
-    
-    
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .card button:hover {
+      opacity: 0.7;
+    }
   </style>
   <body>
     <div id="navbar">
       <a href="#home">Home</a>
-      <a href="#news">About</a>
-      <a href="#contact">Catalog</a>
+      <a href="#about">About</a>
+      <a href="#featured">Featured</a>
       <a href="#featured">Featured</a>
       <a href="https://www.jeversonming.tk">Personal website</a>
     </div>
@@ -87,13 +114,18 @@
         Jeverson Shim Ming Ming Store
       </h1>
     </div>
-    <h2 style="text-align: center">
+    <h2 style="text-align: center" id="about">
       About This Store
     </h2>
     <h3>
       <label id="lblGreetings"></label>
     </h3>
-  </body>
+    <hr>
+    <div id="featured"
+    <h1>
+      Featured
+    </h1>
+  </
   <script>
     $(document).ready(function() {
       // Add smooth scrolling to all links
