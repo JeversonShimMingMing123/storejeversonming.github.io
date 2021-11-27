@@ -93,10 +93,20 @@
       opacity: 1;
       transition: 0.3s;
       position: relative;
+      text-align: center;
     }
 
     .btn:hover {
       opacity: 0.6;
+    }
+    
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
   </style>
   <body>
@@ -127,9 +137,10 @@
         of things such as second hand books and toys, bread/buns and so on,
         Click on the button below to go to the catalog section.
       </h3>
-      <button class="btn">Hover Over Me</button>
+    <div class="container">
+      <button class="btn" class="center">Hover Over Me</button>
       <hr />
-    </catalog>
+    </div>
   </body>
   <script>
     $(document).ready(function() {
