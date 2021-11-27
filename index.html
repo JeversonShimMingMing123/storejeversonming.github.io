@@ -93,7 +93,83 @@
     .card button:hover {
       opacity: 0.7;
     }
-    
+
+    .name {
+      font-family: "dosis";
+      font-size: 70px;
+      text-transform: capitalize;
+    }
+
+    .info {
+      font-size: 18px;
+      line-height: 30px;
+      margin: 50px 0;
+    }
+
+    .price {
+      font-size: 70px;
+      font-weight: 100;
+      margin-bottom: 20px;
+    }
+
+    .btn-and-rating-box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rating {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rating img {
+      width: 20px;
+      height: 20px;
+      margin: 0 2px;
+    }
+
+    .btn {
+      background: #eae3d2;
+      color: #292929;
+      border: none;
+      text-transform: capitalize;
+      font-size: 16px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #eedbaf;
+    }
+
+    @media (max-width: 1100px) {
+      body::before {
+        transform: translateX(-50%) skewX(-5deg);
+      }
+      .product {
+        flex-direction: column;
+        width: 90%;
+        margin: 5vh 0;
+      }
+      .product-img {
+        width: 100%;
+        height: 300px;
+      }
+      .product-listing {
+        width: 100%;
+        min-height: auto;
+      }
+      .name,
+      .price {
+        font-size: 50px;
+      }
+      .info {
+        font: 16px;
+      }
+    }
   </style>
   <body>
     <div id="navbar">
@@ -121,81 +197,94 @@
     <h3>
       <label id="lblGreetings"></label>
     </h3>
-    <hr>
+    <hr />
     <div id="featured">
-    <h1 style="text-align: center;">
-      Featured
-    </h1>
-    <div class="product">
-    <div class="product-img">
-        <img src="img/bag.png" alt="">
-        <span class="tag">new</span>
-    </div>
-    <div class="product-listing">
+      <h1 style="text-align: center;">
+        Featured
+      </h1>
+<table border="1">
+<tbody>
+<tr>
+<td>
+<p><img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" alt="" width="260" height="347" /></p>
+<h1>The big book of fun</h1>
+<p>By Disney Junior</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1">
+<tbody>
+<tr>
+<td>
+<p><img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" alt="" width="260" height="347" /></p>
+<h1>The big book of fun</h1>
+<p>By Disney Junior</p>
+</td>
+</tr>
+</tbody>
+</table>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-    </div>
-</div>
-  </div>
-  <script>
-    $(document).ready(function() {
-      // Add smooth scrolling to all links
-      $("a").on("click", function(event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
+            // Store hash
+            var hash = this.hash;
 
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top
-            },
-            800,
-            function() {
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            }
-          );
-        } // End if
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    });
 
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {
-      myFunction();
-    };
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {
+        myFunction();
+      };
 
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
 
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
 
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
       }
-    }
 
-    var myDate = new Date();
-    var hrs = myDate.getHours();
+      var myDate = new Date();
+      var hrs = myDate.getHours();
 
-    var greet;
+      var greet;
 
-    if (hrs < 12) greet = "Good Morning";
-    else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
-    else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+      if (hrs < 12) greet = "Good Morning";
+      else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+      else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
 
-    document.getElementById("lblGreetings").innerHTML =
-      "<b>" +
-      greet +
-      "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff. Let's click on the button below to see what does this store sell!";
-  </script>
+      document.getElementById("lblGreetings").innerHTML =
+        "<b>" +
+        greet +
+        "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff. Let's click on the button below to see what does this store sell!";
+    </script>
+  </body>
 </html>
