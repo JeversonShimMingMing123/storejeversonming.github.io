@@ -46,19 +46,7 @@
 
     /* Page content */
     .content {
-      padding: 16px;
-    }
-
-    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-    .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
-    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-    .sticky + .content {
-      padding-top: 60px;
+      padding: 20px;
     }
   </style>
   <body>
@@ -85,7 +73,7 @@
       About This Store
     </h2>
     <h3>
-      <label id="lblGreetings"></label>
+      <label id="lblGreetings"></label>  <b>Click on me to see what we sell</b>
       
     </h3>
     <hr />
@@ -96,7 +84,7 @@
       <div class="row">
         <div class="column">
           <div class="card">
-          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" width="200px">
+          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" width="100%">
           <h1 style="text-align: center">
             The Big Book of Fun with All my Friends
             </h1>
@@ -108,12 +96,12 @@
       <div class="row">
         <div class="column">
           <div class="card">
-          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" width="200px">
+          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_20-10-35.jpg?v=1637583055575" width="100%">
           <h1 style="text-align: center">
-            The Big Book of Fun with All my Friends
+            My body
             </h1>
           <h2>
-            Price: RM10
+            Price: RM3
             </h2>
           </div>
         </div>
@@ -158,7 +146,7 @@
         document.getElementById("lblGreetings").innerHTML =
           "<b>" +
           greet +
-          "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff. Let's click on the button below to see what does this store sell!";
+          "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff.";
       </script>
     </div>
   </body>
