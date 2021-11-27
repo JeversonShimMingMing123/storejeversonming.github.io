@@ -64,6 +64,8 @@
     .sticky + .content {
       padding-top: 60px;
     }
+    
+    
   </style>
   <body>
     <div id="navbar">
@@ -79,6 +81,7 @@
           src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2FJeverson%20Shim%20Ming%20Ming%20Store.png?v=1637839694675"
           width="100px"
           class="center"
+          class="avatar"
         />
         <br />
         Jeverson Shim Ming Ming Store
@@ -138,20 +141,19 @@
         navbar.classList.remove("sticky");
       }
     }
-    
+
     var myDate = new Date();
     var hrs = myDate.getHours();
-​
+
     var greet;
-​
-    if (hrs < 12)
-        greet = 'Good Morning';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening';
-​
-    document.getElementById('lblGreetings').innerHTML =
-        '<b>' + greet + '</b> and welcome to Encodedna.com!';
+
+    if (hrs < 12) greet = "Good Morning";
+    else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+    else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+
+    document.getElementById("lblGreetings").innerHTML =
+      "<b>" +
+      greet +
+      "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff. Let's click on the button below to see what does this store sell!";
   </script>
 </html>
