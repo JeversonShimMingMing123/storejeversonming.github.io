@@ -48,54 +48,6 @@
     .content {
       padding: 20px;
     }
-
-    .flip-card {
-      background-color: transparent;
-      width: 300px;
-      height: 200px;
-      border: 1px solid #f1f1f1;
-      perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    }
-
-    /* This container is needed to position the front and back side */
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    /* Position the front and back side */
-    .flip-card-front,
-    .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden; /* Safari */
-      backface-visibility: hidden;
-    }
-
-    /* Style the front side (fallback if image is missing) */
-    .flip-card-front {
-      background-color: #bbb;
-      color: black;
-    }
-
-    /* Style the back side */
-    .flip-card-back {
-      background-color: dodgerblue;
-      color: white;
-      transform: rotateY(180deg);
-      width:300px;
-      height:400px;
-    }
   </style>
   <body>
     <div id="navbar">
@@ -128,30 +80,56 @@
         <h1 style="text-align: center;">
           Featured
         </h1>
-        <i
-          ><p
-            style="text-align: center;"
-          >
-            Psst! Hover on the image to see the information!
-          </p></i
-        >
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
+        <h2 style="text-align:center">Our Team</h2>
+        <div class="row">
+          <div class="column">
+            <div class="card">
               <img
                 src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720"
-                alt="Big book of fun"
-                style="width:300px;height:400px;"
+                alt="The Big book of Fun with All my Friends"
+                style="width:100%"
               />
+              <div class="container">
+                <h2>The Big book of Fun with All my Friends</h2>
+                <p class="title"></p>
+                <p>
+                  Step into a world of fun with the Disney Junior characters!
+                  Show Sofia the First the path to Royal Prep, and take a trip
+                  into space with Mickey Mouse Clubhouse. Includes over 125
+                  games, activities, and comic stories!
+                </p>
+                <p>jane@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
             </div>
-            <div class="flip-card-back">
-              <h1>The big book of Fun with All my Friends</h1>
-              <p>Price: </p>
-              <p>We love that guy</p>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="/w3images/team2.jpg" alt="Mike" style="width:100%" />
+              <div class="container">
+                <h2>Mike Ross</h2>
+                <p class="title">Art Director</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>mike@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="/w3images/team3.jpg" alt="John" style="width:100%" />
+              <div class="container">
+                <h2>John Doe</h2>
+                <p class="title">Designer</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>john@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
             </div>
           </div>
         </div>
-
         <catalog id="catalog"> </catalog>
         <script>
           $(document).ready(function() {
