@@ -48,6 +48,54 @@
     .content {
       padding: 20px;
     }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      transform: rotateY(180deg);
+      width:300px;
+      height:400px;
+    }
   </style>
   <body>
     <div id="navbar">
@@ -73,139 +121,81 @@
       About This Store
     </h2>
     <h3>
-      <label id="lblGreetings"></label>  <a href="#catalog"><b>Click on me</a> to see what we sell</b>
-      
-    </h3>
-    <hr />
-    <div id="featured">
-      <h1 style="text-align: center;">
-        Featured
-      </h1>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" width="100%">
-          <h1 style="text-align: center">
-            The Big Book of Fun with All my Friends
-            </h1>
-          <h2>
-            Price: RM10
-            </h2>
-          </div>
-        </div>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_20-10-35.jpg?v=1637583055575" width="100%">
-          <h1 style="text-align: center">
-            My body
-            </h1>
-          <h2>
-            Price: RM3
-            </h2>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      <catalog id="catalog">
-        <h1 style="text-align: center">
-          Catalog
+      <label id="lblGreetings"></label>
+      <b><a href="#catalog">Click on me</a> to see what we sell</b>
+      <hr />
+      <div id="featured">
+        <h1 style="text-align: center;">
+          Featured
         </h1>
-            <div class="row">
-        <div class="column">
-          <div class="card">
-          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720" width="100%">
-          <h1 style="text-align: center">
-            The Big Book of Fun with All my Friends
-            </h1>
-          <h2>
-            Price: RM10
-            </h2>
+        <i
+          ><p
+            style="text-align: center;"
+          >
+            Psst! Hover on the image to see the information!
+          </p></i
+        >
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_19-38-13.jpg?v=1637581104720"
+                alt="Big book of fun"
+                style="width:300px;height:400px;"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>The big book of Fun with All my Friends</h1>
+              <p>Price: </p>
+              <p>We love that guy</p>
+            </div>
           </div>
         </div>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-          <img src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_20-10-35.jpg?v=1637583055575" width="100%">
-          <h1 style="text-align: center">
-            My body
-            </h1>
-          <h2>
-            Price: RM3
-            </h2>
-          </div>
-        </div>
-        </catalog>
-      <script>
-        $(document).ready(function() {
-          // Add smooth scrolling to all links
-          $("a").on("click", function(event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
 
-              // Store hash
-              var hash = this.hash;
+        <catalog id="catalog"> </catalog>
+        <script>
+          $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on("click", function(event) {
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
 
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $("html, body").animate(
-                {
-                  scrollTop: $(hash).offset().top
-                },
-                800,
-                function() {
-                  // Add hash (#) to URL when done scrolling (default click behavior)
-                  window.location.hash = hash;
-                }
-              );
-            } // End if
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $("html, body").animate(
+                  {
+                    scrollTop: $(hash).offset().top
+                  },
+                  800,
+                  function() {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  }
+                );
+              } // End if
+            });
           });
-        });
 
-        var myDate = new Date();
-        var hrs = myDate.getHours();
+          var myDate = new Date();
+          var hrs = myDate.getHours();
 
-        var greet;
+          var greet;
 
-        if (hrs < 12) greet = "Good Morning";
-        else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
-        else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+          if (hrs < 12) greet = "Good Morning";
+          else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+          else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
 
-        document.getElementById("lblGreetings").innerHTML =
-          "<b>" +
-          greet +
-          "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff.";
-      </script>
-    </div>
+          document.getElementById("lblGreetings").innerHTML =
+            "<b>" +
+            greet +
+            "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff.";
+        </script>
+      </div>
+    </h3>
   </body>
 </html>
