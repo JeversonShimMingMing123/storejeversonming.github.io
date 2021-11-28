@@ -80,7 +80,6 @@
         <h1 style="text-align: center;">
           Featured
         </h1>
-        <h2 style="text-align:center">Our Team</h2>
         <div class="row">
           <div class="column">
             <div class="card">
@@ -98,81 +97,77 @@
                   into space with Mickey Mouse Clubhouse. Includes over 125
                   games, activities, and comic stories!
                 </p>
-                <p>jane@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <p>Price: RM9.99</p>
+                <a href="redirectform.html"
+                  ><p><button class="button">Buy</button></p></a
+                >
               </div>
             </div>
           </div>
 
           <div class="column">
             <div class="card">
-              <img src="/w3images/team2.jpg" alt="Mike" style="width:100%" />
+              <img
+                src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5%2Fphoto_2021-11-22_20-10-35.jpg?v=1637583055575"
+                alt="My Body"
+                style="width:100%"
+              />
               <div class="container">
-                <h2>Mike Ross</h2>
-                <p class="title">Art Director</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>mike@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <h2>My body</h2>
+                <p class="title"></p>
+                <p>A book by Lovely Board-Books</p>
+                <p>Price: RM 2.99</p>
+                <a href="redirectform.html"
+                  ><p><button class="button">Buy</button></p></a
+                >
               </div>
             </div>
           </div>
 
-          <div class="column">
-            <div class="card">
-              <img src="/w3images/team3.jpg" alt="John" style="width:100%" />
-              <div class="container">
-                <h2>John Doe</h2>
-                <p class="title">Designer</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>john@example.com</p>
-                <p><button class="button">Contact</button></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <catalog id="catalog"> </catalog>
-        <script>
-          $(document).ready(function() {
-            // Add smooth scrolling to all links
-            $("a").on("click", function(event) {
-              // Make sure this.hash has a value before overriding default behavior
-              if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
+          <catalog id="catalog"> </catalog>
+          <script>
+            $(document).ready(function() {
+              // Add smooth scrolling to all links
+              $("a").on("click", function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
 
-                // Store hash
-                var hash = this.hash;
+                  // Store hash
+                  var hash = this.hash;
 
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $("html, body").animate(
-                  {
-                    scrollTop: $(hash).offset().top
-                  },
-                  800,
-                  function() {
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                  }
-                );
-              } // End if
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $("html, body").animate(
+                    {
+                      scrollTop: $(hash).offset().top
+                    },
+                    800,
+                    function() {
+                      // Add hash (#) to URL when done scrolling (default click behavior)
+                      window.location.hash = hash;
+                    }
+                  );
+                } // End if
+              });
             });
-          });
 
-          var myDate = new Date();
-          var hrs = myDate.getHours();
+            var myDate = new Date();
+            var hrs = myDate.getHours();
 
-          var greet;
+            var greet;
 
-          if (hrs < 12) greet = "Good Morning";
-          else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
-          else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+            if (hrs < 12) greet = "Good Morning";
+            else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+            else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
 
-          document.getElementById("lblGreetings").innerHTML =
-            "<b>" +
-            greet +
-            "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff.";
-        </script>
+            document.getElementById("lblGreetings").innerHTML =
+              "<b>" +
+              greet +
+              "</b> there! This store is another project by Jeverson Shim Ming Ming. Things we sell a lot of kinds of stuff. We do sell food and some of my second hand stuff.";
+          </script>
+        </div>
       </div>
     </h3>
   </body>
