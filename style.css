@@ -225,3 +225,7 @@ html {
     font-weight:600
   }
 }
+
+.announcement {
+  background-color: teal;
+}
