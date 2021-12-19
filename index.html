@@ -106,14 +106,17 @@
     }
   </style>
   <body>
-    <h1 style="text-align: center;">
-      The store is coming out on the 3rd of January! We don't accept any orders
-      now as the store is now <strong>CURRENTLY</strong> close right now.
-    </h1>
-    <h2>
-      The store is going to open in:
-      <h2 id="demo"></h2>
-    </h2>
+  <video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Heading</h1>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
   </body>
 </html>
 <script>
@@ -146,4 +149,17 @@
       document.getElementById("demo").innerHTML = "EXPIRED";
     }
   }, 1000);
+  
+  var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
 </script>
