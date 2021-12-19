@@ -106,17 +106,21 @@
     }
   </style>
   <body>
-  <video autoplay muted loop id="myVideo">
-  <source src="rain.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="https://cdn.glitch.me/99974305-7adc-4084-b3b8-68d65b95b8a5/y2mate.com%20-%20No%20Copyright%20Video%20Copyright%20Free%20%20Motion%20Graphics%20Background%20Animation%20Green%20Screen%20YouTube_1080p.mp4?v=1639923120792"
+        type="video/mp4"
+      />
+      Your browser does not support HTML5 video.
+    </video>
 
-<div class="content">
-  <h1>Heading</h1>
-  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
-  <button id="myBtn" onclick="myFunction()">Pause</button>
-</div>
-
+    <div class="content">
+      <h1>Store is close</h1>
+      <p>
+        The store is now currently close as the we haven't realease the store yet! We are coming at
+        3rd January 2022 which is in <h2 id="demo"></h2>
+      </p>
+    </div>
   </body>
 </html>
 <script>
@@ -149,17 +153,17 @@
       document.getElementById("demo").innerHTML = "EXPIRED";
     }
   }, 1000);
-  
-  var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
 
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
   }
-}
 </script>
